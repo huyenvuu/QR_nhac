@@ -99,14 +99,17 @@
         function playRandomSong() {
             // Random 1 song
             const randomIndex = Math.floor(Math.random() * playlist.length);
-            const selectedSong = playlist[randomIndex];
+            const selectedVideoId = playlist[randomIndex];
+
+            /// Tạo link nhúng chuẩn có lệnh tự động phát (autoplay=1)
+            const embedUrl = `https://www.youtube.com/embed/${selectedVideoId}?autoplay=1`;
 
             // Show khung nhac
             const playerContainer = document.getElementById('player-container');
             const iframe = document.getElementById('youtube-iframe');
-            
+        
             playerContainer.style.display = 'block';
-            iframe.src = selectedSong;
+            iframe.src = embedUrl;
         }
     </script>
 
