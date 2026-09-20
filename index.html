@@ -25,21 +25,27 @@
             max-width: 400px;
             width: 100%;
         }
-        h3 {
-            color: #ff6b6b;
-            margin-bottom: 20px;
-            font-size: 20px;
-            line-height: 1.4;
-        }
+        /* CSS cho phần hình ảnh */
         .image-container {
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
         .image-container img {
             width: 100%;
-            max-height: 250px;
+            max-height: 220px;
             object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        h3 {
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
         .btn {
             background-color: #ff6b6b;
@@ -66,10 +72,16 @@
 <body>
 
     <div class="card">
+        <!-- CHÈN ẢNH CỦA BẠN VÀO ĐÂY -->
+        <div class="image-container">
+            <!-- Thay link bên dưới thành link ảnh của bạn hoặc tên file ảnh trên GitHub -->
+            <img src="scene4_1.jpg" alt="Khunglong">
+        </div>
+
         <h3 id="message">Hope you stay happy and refreshed for the rest of your workday! 🥤✨</h3>
         <p>Here’s a random song just for you! 🎵</p>
 
-        <!-- Open song random button-->
+        <!-- Open song random button -->
         <button class="btn" onclick="playRandomSong()">🎧</button>
 
         <div id="player-container">
@@ -79,7 +91,7 @@
     </div>
 
     <script>
-        // link YouTube song
+        // Danh sách 12 bài hát YouTube
         const playlist = [
             "https://youtu.be/BgmY2MkrY0I?si=X5XkIyNX2iMltONJ", // you are the reason
             "https://youtu.be/gm3znyA0XLg?si=jL6QWUR9oF1_YIRN", // me and you
@@ -93,7 +105,6 @@
             "https://youtu.be/o_1aF54DO60?si=V1eOTtNebqRoJNWG", // young and beautiful
             "https://youtu.be/AyEwKVPeXzQ?si=L6YjhLG9i37yefqZ", // i wish you coud stay
             "https://youtu.be/-uFQzcY7YHc?si=xxT3qqF8Qtj_6p7t"  // head in the clouds
-
         ];
 
         function playRandomSong() {
