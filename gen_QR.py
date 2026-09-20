@@ -1,7 +1,7 @@
 import qrcode  # pyright: ignore[reportMissingModuleSource]
 
 # WEBSITE URL (Thay link Netlify của bạn vào đây)
-URL = "https://nhacngaunhien.netlify.app"
+URL = 'https://huyenvuu.github.io/QR_nhac/'
 
 # CREATE QR
 qr = qrcode.QRCode(
